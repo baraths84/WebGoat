@@ -17,6 +17,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.time.Instant;
 import java.util.Calendar;
@@ -28,7 +29,7 @@ import java.util.Random;
  * @author nbaars
  * @since 4/23/17.
  */
-@AssignmentPath("/JWT/secret")
+@RestController
 @AssignmentHints({"jwt-secret-hint1", "jwt-secret-hint2", "jwt-secret-hint3"})
 public class JWTSecretKeyEndpoint extends AssignmentEndpoint {
 
@@ -37,7 +38,7 @@ public class JWTSecretKeyEndpoint extends AssignmentEndpoint {
     private static final String WEBGOAT_USER = "WebGoat";
     private static final List<String> expectedClaims = Lists.newArrayList("iss", "iat", "exp", "aud", "sub", "username", "Email", "Role");
     
-    @RequestMapping(path="/gettoken",produces=MediaType.TEXT_HTML_VALUE)
+    @RequestMapping(path="/JWT/gettoken",produces=MediaType.TEXT_HTML_VALUE)
     @ResponseBody
     public String getSecretToken() {
     	return Jwts.builder()
