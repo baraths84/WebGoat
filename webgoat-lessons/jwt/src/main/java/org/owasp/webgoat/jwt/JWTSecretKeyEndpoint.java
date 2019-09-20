@@ -93,7 +93,6 @@ public class JWTSecretKeyEndpoint extends AssignmentEndpoint {
                 }
             }
         } catch (Exception e) {
-        	e.printStackTrace();
             return trackProgress(failed().feedback("jwt-invalid-token").output(e.getMessage()).build());
         }
     }
