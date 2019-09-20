@@ -75,7 +75,7 @@ public class JWTSecretKeyEndpoint extends AssignmentEndpoint {
     		.signWith(SignatureAlgorithm.HS256, JWT_SECRET).compact();
     }
     
-    @PostMapping
+    @PostMapping("/JWT/secret")
     @ResponseBody
     public AttackResult login(@RequestParam String token) {
         try {

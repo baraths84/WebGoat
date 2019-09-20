@@ -128,7 +128,7 @@ public abstract class IntegrationTest {
                 .cookie("WEBWOLFSESSION");
     }
 
-    //@After
+    @After
     public void logout() {
         RestAssured.given()
                 .when()
