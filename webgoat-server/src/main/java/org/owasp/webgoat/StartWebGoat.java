@@ -32,11 +32,12 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Import;
 
 import java.util.Map;
+import java.util.Map;
 
 /**
  * Main entry point, this project is here to get all the lesson jars included to the final jar file
  *
- * @author nbaars
+ * @author nbaars ntest
  * @date 2/21/17
  */
 @SpringBootApplication
